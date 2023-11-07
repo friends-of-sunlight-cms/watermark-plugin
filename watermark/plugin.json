@@ -1,0 +1,26 @@
+{
+    "$schema": "../../../system/schema/extend.json",
+    "name": "Watermark",
+    "description": "Watermarks for uploaded images",
+    "version": "1.0.0",
+    "authors": [
+        {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
+    ],
+    "environment": {
+        "system": "^8.0"
+    },
+    "config_defaults": {
+        "watermark_file": "upload/watermark.png",
+        "watermark_position": "center",
+        "resize_large_watermark": true
+    },
+    "actions": {
+        "config": "ConfigAction"
+    },
+    "langs": {
+        "watermark": "lang"
+    },
+    "events": [
+        {"event": "image.process.after", "script": "event/watermark.php"}
+    ]
+}
