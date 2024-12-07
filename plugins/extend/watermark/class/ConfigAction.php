@@ -20,7 +20,7 @@ class ConfigAction extends BaseConfigAction
         return [
             'watermark_file' => [
                 'label' => _lang('watermark.config.watermark_file'),
-                'input' => '<input type="text" name="config[watermark_file]" ' . Request::post('config[watermark_file]', $config['watermark_file']) . ' class="inputmedium">',
+                'input' => Form::input('text', 'config[watermark_file]', Request::post('config[watermark_file]', $config['watermark_file']), ['class' => 'inputmedium']),
                 'type' => 'text',
             ],
             'watermark_position' => [
@@ -30,7 +30,7 @@ class ConfigAction extends BaseConfigAction
             ],
             'resize_large_watermark' => [
                 'label' => _lang('watermark.config.resize_large_watermark'),
-                'input' => '<input type="checkbox" name="config[resize_large_watermark]" ' . Request::post('config[resize_large_watermark]', $config['resize_large_watermark']) . '>',
+                'input' => Form::input('checkbox', 'config[resize_large_watermark]', Request::post('config[resize_large_watermark]', $config['resize_large_watermark'])),
                 'type' => 'checkbox',
             ]
         ];

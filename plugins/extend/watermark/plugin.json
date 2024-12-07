@@ -2,12 +2,12 @@
     "$schema": "../../../system/schema/extend.json",
     "name": "Watermark",
     "description": "Watermarks for uploaded images",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "authors": [
         {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
     ],
     "environment": {
-        "system": "^8.0"
+        "system": "^8.1"
     },
     "config_defaults": {
         "watermark_file": "upload/watermark.png",
